@@ -9,14 +9,14 @@
     <script type="x-template" id="timeline-template">
         <div class="header">
             <img class="banner" src={{data.info.banner}}>
-            <h1>{{data.info.title}}</h1>
+            <h1 class="title">{{data.info.title}}</h1>
         </div>
         <div class="timeline" style="background-color:{{data.info.backgroundColor}}; color:{{data.info.color}}">
             <div class="events">
                 <div v-for="event of data.events" class="event" :class="{'left': $index % 2 === 0, 'right': $index % 2 !== 0 }">
                     <h2 class="headline">{{event.headline}}</h2>
-                    <img class="event-image" src={{event.image}} />
-                    <p>{{event.description}}<p>
+                    <img class="image" src={{event.image}} />
+                    <p class="description">{{event.description}}<p>
                 </div>
             </div>
         </div>
