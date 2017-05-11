@@ -2,9 +2,22 @@
     "info": {
         "title": "Brief History of United States",
         "banner": "assets/images/banner.png",
+        "color": "#000000",
         "backgroundColor": "#ffdede"
     },
-    "events": [
-        
-    ]
+    "events": [{
+            "headline": "Colonies declare indepedence from Great Britain",
+            "image": "assets/images/declaration.png",
+            "description": "Colonies declare indepedence from Great Britain"
+        },
+        {
+            "headline": "Colonies declare indepedence from Great Britain",
+            "image": "assets/images/declaration.png",
+            "description": "Colonies declare indepedence from Great Britain"
+        },
+        {
+            "headline": "Colonies declare indepedence from Great Britain",
+            "image": "assets/images/declaration.png",
+            "description": "Colonies declare indepedence from Great Britain"
+        }]
 }

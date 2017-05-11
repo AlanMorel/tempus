@@ -11,15 +11,12 @@
             <img class="banner" src={{data.info.banner}}>
             <h1>{{data.info.title}}</h1>
         </div>
-        <div class="timeline" style="background-color:{{data.info.backgroundColor}}">
+        <div class="timeline" style="background-color:{{data.info.backgroundColor}}; color:{{data.info.color}}">
             <div class="events">
-                <div class="event left">
-                    <h2 class="headline">This is an event2</h2>
-                    <p>This is an event description<p>
-                </div>
-                <div class="event right">
-                    <h2 class="headline">This is an event</h2>
-                    <p>This is an event description2<p>
+                <div v-for="event of data.events" class="event" :class="{'left': $index % 2 === 0, 'right': $index % 2 !== 0 }">
+                    <h2 class="headline">{{event.headline}}</h2>
+                    <img class="event-image" src={{event.image}} />
+                    <p>{{event.description}}<p>
                 </div>
             </div>
         </div>
