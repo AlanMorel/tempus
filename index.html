@@ -1,12 +1,19 @@
 <head>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="timeline-app">
-        <timeline></timeline>
+        <timeline source="data.json"></timeline>
     </div>
     <script type="x-template" id="timeline-template">
-        <h1>Hello World!</h1>
+        <div class="header">
+            <img class="banner" src={{data.info.banner}}>
+            <h1>{{data.info.title}}</h1>
+        </div>
+        <div class="timeline" style="background-color:{{data.info.backgroundColor}}">
+
+        </div>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
