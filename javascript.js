@@ -1,6 +1,7 @@
 Vue.component('timeline', {
+    template: '#timeline-template',
 });
 
-var myViewModel = new Vue({
-  el: '#timeline',
+new Vue({
+  el: '#timeline-app',
 });
