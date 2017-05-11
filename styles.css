@@ -27,6 +27,72 @@ h1 {
     background: rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+    margin: 0;
+}
+
 .timeline {
     width: 100%;
+    position: relative;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  height: calc(100% - 10rem);
+  width: 4px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.left {
+    margin-right: auto;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.event {
+    width: 15rem;
+    background: #ff4747;
+    display: block;
+    margin-bottom: 5rem;
+    padding: 1rem;
+}
+
+.events {
+    width: 40rem;
+    display: inline-block;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.headline {
+    position: relative;
+}
+
+.left .headline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    height: 0;
+    width: 0;
+    border: 0.5rem solid transparent;
+    border-left: 0.5rem solid #ff4747;
+}
+
+.right .headline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    height: 0;
+    width: 0;
+    border: 0.5rem solid transparent;
+    border-right: 0.5rem solid #ff4747;
 }

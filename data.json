@@ -2,6 +2,9 @@
     "info": {
         "title": "Brief History of United States",
         "banner": "assets/images/banner.png",
-        "backgroundColor": "red"
-    }
+        "backgroundColor": "#ffdede"
+    },
+    "events": [
+        
+    ]
 }
