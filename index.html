@@ -14,6 +14,7 @@
         <div class="timeline" style="background-color:{{data.info.backgroundColor}}; color:{{data.info.color}}">
             <div class="details">{{data.info.details}}</div>
             <div class="events">
+                <div class="line" style="background-color:{{data.info.lineColor}}"></div>
                 <div v-for="event of data.events" class="event" :class="{'left': $index % 2 === 0, 'right': $index % 2 !== 0 }">
                     <date v-bind:value="event.date"></date>
                     <h2 class="headline">{{event.headline}}</h2>

@@ -4,7 +4,8 @@
         "banner": "assets/images/banner.png",
         "details": "This timeline displays a very brief history of the major events in American history.",
         "color": "#000000",
-        "backgroundColor": "#dee7ff"
+        "backgroundColor": "#dee7ff",
+        "lineColor": "#0051a9"
     },
     "events": [{
             "date": "07-04-1776",
@@ -13,16 +14,28 @@
             "description": "Colonies declare indepedence from Great Britain"
         },
         {
-            "date": "07-04-1776",
-            "headline": "Colonies declare indepedence from Great Britain",
-            "image": "assets/images/declaration.png",
-            "description": "Colonies declare indepedence from Great Britain"
+            "date": "10-29-1929",
+            "headline": "The Wall Street stock market crashes",
+            "image": "assets/images/crash.png",
+            "description": "The Wall Street stock market crashes. Fortunes are lost, and the Great Depression begins."
         },
         {
-            "date": "07-04-1776",
-            "headline": "Colonies declare indepedence from Great Britain",
-            "image": "assets/images/declaration.png",
-            "description": "Colonies declare indepedence from Great Britain"
+            "date": "12-07-1941",
+            "headline": "Japan bombs the U.S. fleet at Pearl Harbor",
+            "image": "assets/images/pearlharbor.png",
+            "description": "Japan bombs the U.S. fleet at Pearl Harbor, in Hawaii. The U.S. enters World War II. The war lasts until 1945."
+        },
+        {
+            "date": "08-28-1963",
+            "headline": "Martin Luther King Jr. delivers his 'I Have a Dream' speech",
+            "image": "assets/images/mlk.png",
+            "description": "Martin Luther King Jr. delivers his 'I Have a Dream' speech in Washington D.C., leading the civil rights movement."
+        },
+        {
+            "date": "07-20-1969",
+            "headline": "One Giant Leap For Mankind",
+            "image": "assets/images/moon.png",
+            "description": "Astronaut Neil Armstrong becomes the first person to walk on the moon."
         }
     ]
 }
