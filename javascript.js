@@ -17,9 +17,9 @@ Vue.component('timeline', {
 
 Vue.component('date', {
     props: ['value'],
-    template: '<h3 class="date">{{this.convertTime(value)}}</h3>',
+    template: '#date-template',
     methods: {
-        convertTime: function (value) {
+        convertDate: function (value) {
             var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', 'timeZone': 'UTC' };
             return new Date(value).toLocaleDateString('en-US', options);
         }

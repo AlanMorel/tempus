@@ -11,11 +11,11 @@
             <img class="banner" src={{data.info.banner}}>
             <h1 class="title">{{data.info.title}}</h1>
         </div>
-        <div class="timeline" style="background-color:{{data.info.backgroundColor}}; color:{{data.info.color}}">
-            <div class="details">{{data.info.details}}</div>
+        <div class="timeline" style="background-color:{{data.info.background}}; color:{{data.info.color}}">
+            <div class="details" style="background-color:{{data.info.detailsBackground}}; color:{{data.info.detailsColor}}">{{data.info.details}}</div>
             <div class="events">
                 <div class="line" style="background-color:{{data.info.lineColor}}"></div>
-                <div v-for="event of data.events" class="event" :class="{'left': $index % 2 === 0, 'right': $index % 2 !== 0 }">
+                <div class="event" v-for="event of data.events">
                     <date v-bind:value="event.date"></date>
                     <h2 class="headline">{{event.headline}}</h2>
                     <img class="image" src={{event.image}} />
@@ -23,6 +23,9 @@
                 </div>
             </div>
         </div>
+    </script>
+    <script type="x-template" id="date-template">
+        <h3 class="date">{{this.convertDate(value)}}</h3>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>

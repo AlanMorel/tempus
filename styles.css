@@ -32,7 +32,6 @@ img {
     padding: 1rem 0;
     margin-bottom: 5rem;
     font-size: 1.25rem;
-    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -45,9 +44,8 @@ img {
 .line {
     content: '';
     position: absolute;
-    top: 5rem;
     left: 50%;
-    height: 100%;
+    height: calc(100% + 10rem);
     width: 0.25rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -76,12 +74,34 @@ img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.left {
+.event:nth-child(odd) {
+    margin-left: auto;
+}
+
+.event:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    height: 0;
+    width: 0;
+    border: 1rem solid transparent;
+    border-right: 1rem solid #60adff;
+}
+
+.event:nth-child(even) {
     margin-right: auto;
 }
 
-.right {
-    margin-left: auto;
+.event:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    height: 0;
+    width: 0;
+    border: 1rem solid transparent;
+    border-left: 1rem solid #60adff;
 }
 
 .date {
@@ -100,26 +120,4 @@ img {
 
 .description {
     font-weight: bold;
-}
-
-.left::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -2rem;
-    height: 0;
-    width: 0;
-    border: 1rem solid transparent;
-    border-left: 1rem solid #60adff;
-}
-
-.right::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -2rem;
-    height: 0;
-    width: 0;
-    border: 1rem solid transparent;
-    border-right: 1rem solid #60adff;
 }

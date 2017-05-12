@@ -1,10 +1,12 @@
 {
     "info": {
-        "title": "Brief History of United States",
+        "title": "History of The United States of America",
         "banner": "assets/images/banner.png",
-        "details": "This timeline displays a very brief history of the major events in American history.",
+        "details": "This timeline displays a very condensed list of the major events in American history.",
         "color": "#000000",
-        "backgroundColor": "#dee7ff",
+        "background": "#dee7ff",
+        "detailsBackground": "#60adff",
+        "detailsColor": "#000000",
         "lineColor": "#0051a9"
     },
     "events": [{
@@ -12,6 +14,12 @@
             "headline": "Colonies declare indepedence from Great Britain",
             "image": "assets/images/declaration.png",
             "description": "Colonies declare indepedence from Great Britain"
+        },
+        {
+            "date": "04-12-1861",
+            "headline": "The Civil War begins",
+            "image": "assets/images/civilwar.png",
+            "description": "The North and South fight the Civil War over slavery and other issues. "
         },
         {
             "date": "10-29-1929",
