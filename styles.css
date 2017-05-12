@@ -28,42 +28,48 @@ img {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.timeline {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    padding-bottom: 5rem;
+.details {
+    padding: 3rem 0;
+    font-size: 1.5rem;
 }
 
-.timeline::before {
+.timeline {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 14rem;
+}
+
+.events::before {
     content: '';
     position: absolute;
     top: 5rem;
     left: 50%;
     height: calc(100% - 10rem);
     width: 4px;
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .events {
     width: 100%;
     display: inline-block;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 0;
     max-width: 80rem;
     text-align: left;
     padding: 0 1rem;
     box-sizing: border-box;
+    position: relative;
 }
 
 .event {
     width: calc(45% - 2rem);
-    background: #ff4747;
+    background: #60adff;
     display: block;
-    margin-bottom: 5rem;
+    margin-bottom: -10rem;
     padding: 1rem;
     border-radius: 0.5rem;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .left {
@@ -74,9 +80,18 @@ img {
     margin-left: auto;
 }
 
+.date {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+}
+
 .headline {
     position: relative;
     margin: 0 0 0.5rem;
+}
+
+.image {
+    border-radius: 0.25rem;
 }
 
 .left::before {
@@ -87,7 +102,7 @@ img {
     height: 0;
     width: 0;
     border: 1rem solid transparent;
-    border-left: 1rem solid #ff4747;
+    border-left: 1rem solid #60adff;
 }
 
 .right::before {
@@ -98,5 +113,5 @@ img {
     height: 0;
     width: 0;
     border: 1rem solid transparent;
-    border-right: 1rem solid #ff4747;
+    border-right: 1rem solid #60adff;
 }
