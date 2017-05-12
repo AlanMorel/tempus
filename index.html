@@ -8,7 +8,7 @@
     </div>
     <script type="x-template" id="timeline-template">
         <div class="header">
-            <img class="banner" src={{data.info.banner}}>
+            <img class="banner" src={{data.info.banner}} />
             <h1 class="title">{{data.info.title}}</h1>
         </div>
         <div class="timeline" style="background-color:{{data.info.background}}; color:{{data.info.color}}">
@@ -19,13 +19,13 @@
                     <date v-bind:value="event.date"></date>
                     <h2 class="headline">{{event.headline}}</h2>
                     <img class="image" src={{event.image}} />
-                    <p class="description">{{event.description}}<p>
+                    <p class="description">{{event.description}}</p>
                 </div>
             </div>
         </div>
     </script>
     <script type="x-template" id="date-template">
-        <h3 class="date">{{this.convertDate(value)}}</h3>
+        <h3 class="date">{{this.formatDate(value)}}</h3>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>

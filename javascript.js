@@ -19,7 +19,7 @@ Vue.component('date', {
     props: ['value'],
     template: '#date-template',
     methods: {
-        convertDate: function (value) {
+        formatDate: function (value) {
             var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', 'timeZone': 'UTC' };
             return new Date(value).toLocaleDateString('en-US', options);
         }
