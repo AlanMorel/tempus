@@ -44,7 +44,7 @@ img {
 .line {
     content: '';
     position: absolute;
-    left: 50%;
+    left: calc(50% - 0.125rem);
     height: calc(100% + 10rem);
     width: 0.25rem;
     border-radius: 1rem;
