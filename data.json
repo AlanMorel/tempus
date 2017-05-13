@@ -10,37 +10,37 @@
         "lineColor": "#0051a9"
     },
     "events": [{
-            "date": "07-04-1776",
+            "date": "1776-07-04",
             "headline": "Colonies declare indepedence from Great Britain",
             "image": "/assets/images/declaration.png",
             "description": "Colonies declare indepedence from Great Britain"
         },
         {
-            "date": "04-12-1861",
+            "date": "1861-04-12",
             "headline": "The Civil War begins",
             "image": "/assets/images/civilwar.png",
             "description": "The North and South fight the Civil War over slavery and other issues. "
         },
         {
-            "date": "10-29-1929",
+            "date": "1929-10-29",
             "headline": "The Wall Street stock market crashes",
             "image": "/assets/images/crash.png",
             "description": "The Wall Street stock market crashes. Fortunes are lost, and the Great Depression begins."
         },
         {
-            "date": "12-07-1941",
+            "date": "1941-12-07",
             "headline": "Japan bombs the U.S. fleet at Pearl Harbor",
             "image": "/assets/images/pearlharbor.png",
             "description": "Japan bombs the U.S. fleet at Pearl Harbor, in Hawaii. The U.S. enters World War II. The war lasts until 1945."
         },
         {
-            "date": "08-28-1963",
+            "date": "1963-08-28",
             "headline": "Martin Luther King Jr. delivers his 'I Have a Dream' speech",
             "image": "/assets/images/mlk.png",
             "description": "Martin Luther King Jr. delivers his 'I Have a Dream' speech in Washington D.C., leading the civil rights movement."
         },
         {
-            "date": "07-20-1969",
+            "date": "1969-07-20",
             "headline": "One Giant Leap For Mankind",
             "image": "/assets/images/moon.png",
             "description": "Astronaut Neil Armstrong becomes the first person to walk on the moon."

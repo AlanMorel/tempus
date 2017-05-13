@@ -8,21 +8,61 @@
         <builder source="/data.json"></builder>
     </div>
     <script type="x-template" id="builder-template">
-        <div class="header">
-            <img class="banner" src={{data.info.banner}} />
-            <h1 class="title">{{data.info.title}}</h1>
+        <h1>Header</h1>
+        <div>
+            <label>Banner image URL:</label>
+            <input type="text" value={{data.info.banner}}></input>
         </div>
-        <div class="timeline" style={{this.timelineStyles()}}>
-            <div class="details" style={{this.detailsStyles()}}>{{data.info.details}}</div>
-            <div class="events">
-                <div class="line" style={{this.lineStyles()}}></div>
-                <div class="event" v-for="event of data.events">
-                    <date v-bind:value="event.date"></date>
-                    <h2 class="headline">{{event.headline}}</h2>
-                    <img class="image" src={{event.image}} />
-                    <p class="description">{{event.description}}</p>
-                </div>
+        <div>
+            <label>Title:</label>
+            <input type="text" value={{data.info.title}}></input>
+        </div>
+        <h1>Main Colors</h1>
+        <div>
+            <label>Timeline Background:</label>
+            <input type="color" value={{data.info.background}}></input>
+        </div>
+        <div>
+            <label>Timeline Text Color:</label>
+            <input type="color" value={{data.info.color}}></input>
+        </div>
+        <h1>Details</h1>
+        <div>
+            <label>Details:</label>
+            <textarea rows="5" cols="65">{{data.info.details}}</textarea>
+        </div>
+        <div>
+            <label>Details Background:</label>
+            <input type="color" value={{data.info.detailsBackground}}></input>
+        </div>
+        <div>
+            <label>Details Text Color:</label>
+            <input type="color" value={{data.info.detailsColor}}></input>
+        </div>
+        <h1>Line</h1>
+        <div>
+            <label>Line Color:</label>
+            <input type="color" value={{data.info.lineColor}}></input>
+        </div>
+        <h1>Events</h1>
+        <div class="event" v-for="event of data.events">
+            <div>
+                <label>Date:</label>
+                <input type="date" value={{event.date}}></input>
             </div>
+            <div>
+                <label>Headline:</label>
+                <input type="text" value={{data.headline}}></input>
+            </div>
+            <div>
+                <label>Event image URL:</label>
+                <input type="text" value={{event.image}}></input>
+            </div>
+            <div>
+                <label>Description:</label>
+                <textarea rows="5" cols="65">{{event.description}}</textarea>
+            </div>
+            <hr>
         </div>
     </script>
     <script type="x-template" id="date-template">
