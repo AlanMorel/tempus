@@ -12,7 +12,18 @@ Vue.component('timeline', {
         .catch(e => {
             this.errors.push(e)
         })
-    }
+    },
+    methods: {
+        timelineStyles: function() {
+            return "background-color:" + this.data.info.background + "; color:" + this.data.info.color + ";";
+        },
+        detailsStyles: function() {
+            return "background-color:" + this.data.info.detailsBackground + "; color:" + this.data.info.detailsColor + ";";
+        },
+        lineStyles: function() {
+            return "background-color:" + this.data.info.lineColor + ";";
+        }
+    },
 });
 
 Vue.component('date', {

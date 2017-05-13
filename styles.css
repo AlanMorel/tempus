@@ -38,7 +38,7 @@ img {
 .timeline {
     width: 100%;
     text-align: center;
-    padding-bottom: 20rem;
+    padding-bottom: 15rem;
 }
 
 .line {
@@ -167,6 +167,10 @@ img {
         width: calc(100% - 4rem);
         margin-bottom: 2rem;
         margin-left: 2rem;
+    }
+
+    .event:last-child {
+        margin-bottom: 0;
     }
 
     .event:nth-child(even) {
