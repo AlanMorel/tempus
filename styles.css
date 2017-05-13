@@ -64,7 +64,7 @@ img {
 }
 
 .event {
-    width: calc(45% - 2rem);
+    width: calc(47% - 2.5rem);
     background: #60adff;
     display: block;
     margin-bottom: -10rem;
@@ -120,4 +120,71 @@ img {
 
 .description {
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 50rem) {
+
+    .timeline {
+        padding-bottom: 5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .details {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .date {
+        margin: 0;
+        font-size: 0.5rem;
+    }
+
+    .description {
+        margin: 0.5rem 0;
+        font-size: 0.6rem;
+    }
+
+    .headline {
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+    }
+
+    .image {
+        border-radius: 0.5rem;
+    }
+
+    .line {
+        height: 100%;
+        left: 1rem;
+    }
+
+    .event {
+        padding: 0.75rem;
+        width: calc(100% - 4rem);
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+    }
+
+    .event:nth-child(even) {
+        margin-right: initial;
+    }
+
+    .event:nth-child(odd) {
+        margin-left: 2rem;
+    }
+
+    .event:nth-child(even)::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -2rem;
+        height: 0;
+        width: 0;
+        border: 1rem solid transparent;
+        border-right: 1rem solid #60adff;
+    }
 }
