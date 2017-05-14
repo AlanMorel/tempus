@@ -51,14 +51,10 @@ Vue.component('builder', {
         addSource: function(eventIndex) {
             var sources = this.timeline.events[eventIndex].sources;
             console.log(sources);
-            if (sources.indexOf('') > 0) {
-                return;
-            }
             sources.push("");
         },
         deleteSource: function(eventIndex, sourceIndex) {
             console.log(eventIndex, sourceIndex);
-
             this.timeline.events[eventIndex].sources.splice(sourceIndex, 1);
         },
     },

@@ -8,22 +8,24 @@
         <timeline source="timeline.json"></timeline>
     </div>
     <script type="text/template" id="timeline-template">
-        <div class="header">
-            <img class="banner" src={{timeline.banner}} />
-            <h1 class="title">{{timeline.title}}</h1>
-        </div>
-        <div class="timeline" style={{this.timelineStyles()}}>
-            <div class="details" style={{this.detailsStyles()}}>{{timeline.details}}</div>
-            <div class="events">
-                <div class="line" style={{this.lineStyles()}}></div>
-                <div class="event" style={{this.eventStyles()}} v-for="event of timeline.events">
-                    <date v-bind:value="event.date"></date>
-                    <h2 class="headline">{{event.headline}}</h2>
-                    <img class="image" src={{event.image}} />
-                    <p class="description">{{event.description}}</p>
-                    <div v-if="event.sources.length">
-                        <div class="source" v-for="source of event.sources">
-                            &bull; <a href={{source}} style={{this.linkStyles()}}>{{source}}</a>
+        <div>
+            <div class="header">
+                <img class="banner" :src=timeline.banner />
+                <h1 class="title">{{timeline.title}}</h1>
+            </div>
+            <div class="timeline" :style=timelineStyles()>
+                <div class="details" :style=detailsStyles()>{{timeline.details}}</div>
+                <div class="events">
+                    <div class="line" :style=lineStyles()></div>
+                    <div class="event" :style=eventStyles() v-for="event of timeline.events">
+                        <date v-bind:value="event.date"></date>
+                        <h2 class="headline">{{event.headline}}</h2>
+                        <img class="image" :src=event.image />
+                        <p class="description">{{event.description}}</p>
+                        <div v-if="event.sources.length">
+                            <div class="source" v-for="source of event.sources">
+                                &bull; <a :href=source :style=linkStyles()>{{source}}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,9 +33,9 @@
         </div>
     </script>
     <script type="text/template" id="date-template">
-        <h3 class="date">{{this.formatDate(value)}}</h3>
+        <h3 class="date">{{formatDate(value)}}</h3>
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.js"></script>
     <script src="javascript.js"/></script>
 </body>
