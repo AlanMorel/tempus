@@ -4,9 +4,8 @@
         "banner": "/assets/images/banner.png",
         "details": "This timeline displays a very condensed list of the major events in American history.",
         "color": "#000000",
-        "background": "#dee7ff",
-        "detailsBackground": "#60adff",
-        "detailsColor": "#000000",
+        "primaryColor": "#85c0ff",
+        "secondaryColor": "#dee7ff",
         "lineColor": "#0051a9"
     },
     "events": [{

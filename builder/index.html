@@ -22,8 +22,12 @@
         </div>
         <h2>Timeline</h2>
         <div>
-            <label>Background:</label>
-            <input type="color" v-model=data.info.background value={{data.info.background}}></input>
+            <label>Primary:</label>
+            <input type="color" v-model=data.info.primaryColor value={{data.info.primaryColor}}></input>
+        </div>
+        <div>
+            <label>Secondary:</label>
+            <input type="color" v-model=data.info.secondaryColor value={{data.info.secondaryColor}}></input>
         </div>
         <div>
             <label>Text Color:</label>
@@ -33,18 +37,9 @@
             <label>Line Color:</label>
             <input type="color" v-model={{data.info.lineColor}} value={{data.info.lineColor}}></input>
         </div>
-        <h2>Details</h2>
         <div>
-            <label>Contents:</label>
+            <label>Details:</label>
             <textarea rows="2" v-model=data.info.details></textarea>
-        </div>
-        <div>
-            <label>Background:</label>
-            <input type="color" v-model=data.info.detailsBackground value={{data.info.detailsBackground}}></input>
-        </div>
-        <div>
-            <label>Text Color:</label>
-            <input type="color" v-model=data.info.detailsColor value={{data.info.detailsColor}}></input>
         </div>
         <h2>Events</h2>
         <div class="event" v-for="event in data.events">

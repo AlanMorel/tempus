@@ -15,13 +15,16 @@ Vue.component('timeline', {
     },
     methods: {
         timelineStyles: function() {
-            return "background-color:" + this.data.info.background + "; color:" + this.data.info.color + ";";
+            return "background-color:" + this.data.info.secondaryColor + "; color:" + this.data.info.color + ";";
         },
         detailsStyles: function() {
-            return "background-color:" + this.data.info.detailsBackground + "; color:" + this.data.info.detailsColor + ";";
+            return "background-color:" + this.data.info.primaryColor + "; color:" + this.data.info.color + ";";
         },
         lineStyles: function() {
             return "background-color:" + this.data.info.lineColor + ";";
+        },
+        eventStyles: function() {
+            return "background-color:" + this.data.info.primaryColor + ";";
         }
     },
 });
