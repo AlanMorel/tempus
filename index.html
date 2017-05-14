@@ -7,7 +7,7 @@
     <div id="timeline-app">
         <timeline source="data.json"></timeline>
     </div>
-    <script type="x-template" id="timeline-template">
+    <script type="text/template" id="timeline-template">
         <div class="header">
             <img class="banner" src={{data.info.banner}} />
             <h1 class="title">{{data.info.title}}</h1>
@@ -25,7 +25,7 @@
             </div>
         </div>
     </script>
-    <script type="x-template" id="date-template">
+    <script type="text/template" id="date-template">
         <h3 class="date">{{this.formatDate(value)}}</h3>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>

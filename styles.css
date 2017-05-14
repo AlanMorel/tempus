@@ -109,8 +109,8 @@ img {
 }
 
 .date {
-    margin: 0 0 0.25rem;
-    font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.85rem;
     letter-spacing: 0.05rem;
     font-family: 'Lora', serif;
 }
@@ -119,7 +119,8 @@ img {
     font-family: 'Cardo', serif;
     font-weight: bold;
     position: relative;
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
+    font-size: 1.75rem;
 }
 
 .image {
