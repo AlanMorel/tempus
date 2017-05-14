@@ -2,7 +2,9 @@
 
 #builder-app {
     padding: 0;
-    margin-bottom: 0
+    width: 40rem;
+    margin: auto;
+    margin-bottom: 5rem;
 }
 
 body {
@@ -10,9 +12,12 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 h1, h2 {
-    margin: 0.5rem 0;
-    padding-left: 0.5rem;
+    margin: 2rem 0 0.5rem;
 }
 
 img {
@@ -20,7 +25,7 @@ img {
 }
 
 label {
-    width: 12rem;
+    width: 7rem;
     display: inline-block;
     vertical-align: top;
 }
@@ -29,6 +34,7 @@ textarea {
     font-family: "Open Sans", sans-serif;
     margin-left: -4px;
     width: 30rem;
+    resize: vertical;
 }
 
 input {
@@ -38,38 +44,41 @@ input {
 }
 
 button {
-    margin-left: 2rem;
+    margin-left: 1rem;
     vertical-align: top;
+    border: solid 1px lightgray;
+    padding: 0.5rem 1rem;
+    background: white;
 }
 
 .banner-image, .event-image {
-    margin-left: 12rem;
+    margin-left: 7rem;
     margin-top: 1rem;
     width: 30rem;
 }
 
 .event {
     padding: 1rem 0;
-    margin-bottom: 0;
-}
-
-.event:nth-child(even) {
-    background-color: white;
-}
-
-.event:nth-child(odd) {
-    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 div {
     margin-bottom: 1rem;
-    padding-left: 2rem;
+}
+
+.event div {
+    padding-left: 1rem;
 }
 
 .actions {
-    padding: 2rem 0 2rem 2rem;
+    padding: 1rem 0 2rem 2rem;
     background-color: #d7ecff;
     margin-bottom: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .actions button {
@@ -79,8 +88,6 @@ div {
 
 .actions textarea {
     margin-top: 1rem;
-}
-
-@media screen and (max-width: 50rem) {
-
+    width: 36rem;
+    margin-left: 1px;
 }
