@@ -56,17 +56,17 @@ div {
     padding-left: 2rem;
 }
 
-.new-event {
-    margin-top: 1rem;
-    padding-left: 0
+.actions {
+    padding-top: 1rem;
+    background-color: #d7ecff;
 }
 
-.output button {
+.actions button {
     margin-left: 0;
     margin-right: 1rem;
 }
 
-.output textarea {
+.actions textarea {
     margin-top: 1rem;
 }
 
