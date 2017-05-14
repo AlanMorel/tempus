@@ -8,7 +8,8 @@
         <builder source="/data.json"></builder>
     </div>
     <script type="x-template" id="builder-template">
-        <h1>Header</h1>
+        <h1>Tempus Timeline Builder</h1>
+        <h2>Header</h2>
         <div>
             <label>Banner image URL:</label>
             <input type="text" v-model=data.info.banner value={{data.info.banner}}></input>
@@ -17,7 +18,7 @@
             <label>Title:</label>
             <input type="text" v-model=data.info.title value={{data.info.title}}></input>
         </div>
-        <h1>Main Colors</h1>
+        <h2>Main Colors</h2>
         <div>
             <label>Timeline Background:</label>
             <input type="color" v-model=data.info.background value={{data.info.background}}></input>
@@ -26,10 +27,10 @@
             <label>Timeline Text Color:</label>
             <input type="color" v-model=data.info.color value={{data.info.color}}></input>
         </div>
-        <h1>Details</h1>
+        <h2>Details</h2>
         <div>
             <label>Details:</label>
-            <textarea rows="5" cols="65" v-model=data.info.details></textarea>
+            <textarea rows="3" cols="65" v-model=data.info.details></textarea>
         </div>
         <div>
             <label>Details Background:</label>
@@ -39,12 +40,12 @@
             <label>Details Text Color:</label>
             <input type="color" v-model=data.info.detailsColor value={{data.info.detailsColor}}></input>
         </div>
-        <h1>Line</h1>
+        <h2>Line</h2>
         <div>
             <label>Line Color:</label>
             <input type="color" v-model={{data.info.lineColor}}></input>
         </div>
-        <h1>Events</h1>
+        <h2>Events</h2>
         <div class="event" v-for="event in data.events">
             <div>
                 <label>Date:</label>
