@@ -9,6 +9,10 @@ img {
     width: 100%;
 }
 
+.source {
+    font-size: 0.8rem;
+}
+
 .header {
     display: inline-block;
     width: 100%;
@@ -133,6 +137,10 @@ img {
 
 
 @media screen and (max-width: 50rem) {
+
+    .source {
+        font-size: 0.6rem;
+    }
 
     .timeline {
         padding-bottom: 5rem;

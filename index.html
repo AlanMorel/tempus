@@ -21,6 +21,11 @@
                     <h2 class="headline">{{event.headline}}</h2>
                     <img class="image" src={{event.image}} />
                     <p class="description">{{event.description}}</p>
+                    <div v-if="event.sources.length">
+                        <div class="source" v-for="source of event.sources">
+                            &bull; <a href={{source}} style={{this.linkStyles()}}>{{source}}</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
