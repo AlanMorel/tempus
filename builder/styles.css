@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Cardo');
 
+#builder-app {
+    padding: 0;
+}
+
 body {
-    margin: 1.5rem;
+    margin: 0;
     font-family: "Open Sans", sans-serif;
 }
 
 h1 {
-    margin: 0.5rem 0
+    margin: 0.5rem 0;
+    padding-left: 0.5rem;
 }
 
 img {
@@ -28,17 +33,31 @@ input {
     font-family: "Open Sans", sans-serif;
 }
 
-.event {
+button {
     margin-left: 2rem;
-    margin-bottom: 1rem;
+}
+
+.event {
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+.event:nth-child(even) {
+    background-color: white;
+}
+
+.event:nth-child(odd) {
+    background-color: #fbfbfb;
 }
 
 div {
     margin-bottom: 1rem;
+    padding-left: 2rem;
 }
 
-hr {
+.new-event {
     margin-top: 1rem;
+    padding-left: 0
 }
 
 @media screen and (max-width: 50rem) {

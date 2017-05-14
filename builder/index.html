@@ -45,14 +45,14 @@
             <input type="color" value={{data.info.lineColor}}></input>
         </div>
         <h1>Events</h1>
-        <div class="event" v-for="event of data.events">
+        <div class="event" v-for="event in data.events">
             <div>
                 <label>Date:</label>
                 <input type="date" value={{event.date}}></input>
             </div>
             <div>
                 <label>Headline:</label>
-                <input type="text" value={{data.headline}}></input>
+                <input type="text" value={{event.headline}}></input>
             </div>
             <div>
                 <label>Event image URL:</label>
@@ -62,7 +62,10 @@
                 <label>Description:</label>
                 <textarea rows="5" cols="65">{{event.description}}</textarea>
             </div>
-            <hr>
+            <button v-on:click="delete(this.$index)">Delete Event</button>
+        </div>
+        <div class="new-event">
+            <button v-on:click="add">Add New Event</button>
         </div>
     </script>
     <script type="x-template" id="date-template">
