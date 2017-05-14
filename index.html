@@ -5,18 +5,18 @@
 
 <body>
     <div id="timeline-app">
-        <timeline source="data.json"></timeline>
+        <timeline source="timeline.json"></timeline>
     </div>
     <script type="text/template" id="timeline-template">
         <div class="header">
-            <img class="banner" src={{data.info.banner}} />
-            <h1 class="title">{{data.info.title}}</h1>
+            <img class="banner" src={{timeline.banner}} />
+            <h1 class="title">{{timeline.title}}</h1>
         </div>
         <div class="timeline" style={{this.timelineStyles()}}>
-            <div class="details" style={{this.detailsStyles()}}>{{data.info.details}}</div>
+            <div class="details" style={{this.detailsStyles()}}>{{timeline.details}}</div>
             <div class="events">
                 <div class="line" style={{this.lineStyles()}}></div>
-                <div class="event" style={{this.eventStyles()}} v-for="event of data.events">
+                <div class="event" style={{this.eventStyles()}} v-for="event of timeline.events">
                     <date v-bind:value="event.date"></date>
                     <h2 class="headline">{{event.headline}}</h2>
                     <img class="image" src={{event.image}} />

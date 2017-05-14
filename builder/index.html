@@ -5,44 +5,44 @@
 
 <body>
     <div id="builder-app">
-        <builder source="/data.json"></builder>
+        <builder source="/timeline.json"></builder>
     </div>
     <script type="x-template" id="builder-template">
         <h1>Tempus Timeline Builder</h1>
         <h2>Header</h2>
         <div>
             <label>Title:</label>
-            <input type="text" v-model=data.info.title value={{data.info.title}}></input>
+            <input type="text" v-model=timeline.title value={{timeline.title}}></input>
         </div>
         <div>
             <label>Banner:</label>
-            <input type="text" v-model=data.info.banner value={{data.info.banner}}></input>
+            <input type="text" v-model=timeline.banner value={{timeline.banner}}></input>
             <br>
-            <img class="banner-image" src={{data.info.banner}}></img>
+            <img class="banner-image" src={{timeline.banner}}></img>
         </div>
         <h2>Timeline</h2>
         <div>
             <label>Primary:</label>
-            <input type="color" v-model=data.info.primaryColor value={{data.info.primaryColor}}></input>
+            <input type="color" v-model=timeline.primaryColor value={{timeline.primaryColor}}></input>
         </div>
         <div>
             <label>Secondary:</label>
-            <input type="color" v-model=data.info.secondaryColor value={{data.info.secondaryColor}}></input>
+            <input type="color" v-model=timeline.secondaryColor value={{timeline.secondaryColor}}></input>
         </div>
         <div>
             <label>Text Color:</label>
-            <input type="color" v-model=data.info.color value={{data.info.color}}></input>
+            <input type="color" v-model=timeline.color value={{timeline.color}}></input>
         </div>
         <div>
             <label>Line Color:</label>
-            <input type="color" v-model={{data.info.lineColor}} value={{data.info.lineColor}}></input>
+            <input type="color" v-model={{timeline.lineColor}} value={{timeline.lineColor}}></input>
         </div>
         <div>
             <label>Details:</label>
-            <textarea rows="2" v-model=data.info.details></textarea>
+            <textarea rows="2" v-model=timeline.details></textarea>
         </div>
         <h2>Events</h2>
-        <div class="event" v-for="event in data.events">
+        <div class="event" v-for="event in timeline.events">
             <div>
                 <label>Date:</label>
                 <input type="date" v-model=event.date value={{event.date}}></input>
@@ -61,12 +61,20 @@
                 <label>Description:</label>
                 <textarea rows="5" v-model=event.description>{{event.description}}</textarea>
             </div>
-            <button v-on:click="delete(this.$index)">Delete Event</button>
+            <div class="sources">
+                <label>Sources:</label>
+                <span v-for="(index, link) of event.sources" class="source" :key="{{this.$index}}">
+                    <input type="text" value={{link}}></input>
+                    <button v-on:click="deleteSource(this.$parent.$index, this.$index)">X</button>
+                </span>
+                <button v-on:click="addSource(this.$index)" class="add-source">Add New Source</button>
+            </div>
+            <button v-on:click="deleteEvent(this.$index)">Delete Event</button>
         </div>
         <div class="actions">
-            <button v-on:click="add">Add New Timeline Event</button>
-            <button v-on:click="save">Save Timeline</button>
-            <button v-on:click="load">Load Timeline</button>
+            <button v-on:click="addEvent">Add New Timeline Event</button>
+            <button v-on:click="saveTimeline">Save Timeline</button>
+            <button v-on:click="loadTimeline">Load Timeline</button>
             <br>
             <textarea rows="50" v-model=output></textarea>
         </div>

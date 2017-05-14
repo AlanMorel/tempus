@@ -2,12 +2,12 @@ Vue.component('timeline', {
     props: ['source'],
     template: '#timeline-template',
     data: () => ({
-        data: {}
+        timeline: {}
     }),
     created() {
         axios.get(this.source).then(response => {
-            this.data = response.data
-            console.log(this.data);
+            this.timeline = response.data
+            console.log(this.timeline);
         })
         .catch(e => {
             this.errors.push(e)
@@ -16,29 +16,29 @@ Vue.component('timeline', {
     methods: {
         timelineStyles: function() {
             return [
-                "background-color:" + this.data.info.secondaryColor + ";",
-                "color:" + this.data.info.color + ";"
+                "background-color:" + this.timeline.secondaryColor + ";",
+                "color:" + this.timeline.color + ";"
             ].join('');
         },
         detailsStyles: function() {
             return [
-                "background-color:" + this.data.info.primaryColor + ";",
-                "color:" + this.data.info.color + ";"
+                "background-color:" + this.timeline.primaryColor + ";",
+                "color:" + this.timeline.color + ";"
             ].join('');
         },
         lineStyles: function() {
             return [
-                "background-color:" + this.data.info.lineColor + ";"
+                "background-color:" + this.timeline.lineColor + ";"
             ].join('');
         },
         eventStyles: function() {
             return [
-                "background-color:" + this.data.info.primaryColor + ";"
+                "background-color:" + this.timeline.primaryColor + ";"
             ].join('');
         },
         linkStyles: function() {
             return [
-                "color:" + this.data.info.color + ";"
+                "color:" + this.timeline.color + ";"
             ].join('');
         }
     },

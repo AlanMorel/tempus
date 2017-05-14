@@ -2,52 +2,62 @@ Vue.component('builder', {
     props: ['source'],
     template: '#builder-template',
     data: () => ({
-        data: {},
+        timeline: {},
         output: ""
     }),
     created() {
         axios.get(this.source).then(response => {
-            this.data = response.data
+            this.timeline = response.data
         })
         .catch(e => {
             this.errors.push(e)
         })
     },
     methods: {
-        add: function() {
-            this.data.events.push({
+        addEvent: function() {
+            this.timeline.events.push({
                 "date": "1990-01-01",
                 "headline": "Enter headline",
                 "image": "/assets/images/",
                 "description": "Enter description"
             });
         },
-        delete: function(index) {
-            this.data.events.splice(index, 1);
+        deleteEvent: function(index) {
+            this.timeline.events.splice(index, 1);
         },
-        save: function() {
+        saveTimeline: function() {
 
             console.log("SAVING");
 
-            if (this.data.events && this.data.events.length){
-                this.data.events.sort(function(a, b) {
+            if (this.timeline.events && this.timeline.events.length){
+                this.timeline.events.sort(function(a, b) {
                     return new Date(a.date) - new Date(b.date);
                 });
             }
 
-            this.output = JSON.stringify(this.data);
+            this.output = JSON.stringify(this.timeline);
         },
-        load: function() {
+        loadTimeline: function() {
 
             console.log("LOADING");
 
             if (this.output.length < 1){
-                this.data = {};
+                this.timeline = {};
                 return;
             }
 
-            this.data = JSON.parse(this.output);
-        }
+            this.timeline = JSON.parse(this.output);
+        },
+        addSource: function(eventIndex) {
+            console.log(this.timeline.events[eventIndex].sources);
+            this.timeline.events[eventIndex].sources.push("Enter source URL");
+            console.log(this.timeline.events[eventIndex].sources);
+        },
+        deleteSource: function(eventIndex, sourceIndex) {
+            console.log(eventIndex, sourceIndex);
+
+            this.timeline.events[eventIndex].sources.splice(sourceIndex, 1);
+        },
     },
 });
 

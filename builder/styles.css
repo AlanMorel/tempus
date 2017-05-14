@@ -73,6 +73,30 @@ div {
     padding-left: 1rem;
 }
 
+.source {
+    float: right;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.source input {
+    width: 27rem;
+}
+
+.source button {
+    padding: 0.25rem 1rem;
+    margin-left: 0;
+}
+
+.add-source {
+    margin-left: -4px;
+}
+
+span + .add-source {
+    margin-left: 7rem;
+    display: inline-block;
+}
+
 .actions {
     padding: 1rem 0 2rem 2rem;
     background-color: #d7ecff;
