@@ -64,7 +64,7 @@
             <div class="sources">
                 <label>Sources:</label>
                 <span v-for="(index, link) of event.sources" class="source" :key="{{this.$index}}">
-                    <input type="text" value={{link}}></input>
+                    <input type="text" v-model=link value={{link}}></input>
                     <button v-on:click="deleteSource(this.$parent.$index, this.$index)">X</button>
                 </span>
                 <button v-on:click="addSource(this.$index)" class="add-source">Add New Source</button>

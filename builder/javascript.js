@@ -49,9 +49,12 @@ Vue.component('builder', {
             this.timeline = JSON.parse(this.output);
         },
         addSource: function(eventIndex) {
-            console.log(this.timeline.events[eventIndex].sources);
-            this.timeline.events[eventIndex].sources.push("Enter source URL");
-            console.log(this.timeline.events[eventIndex].sources);
+            var sources = this.timeline.events[eventIndex].sources;
+            console.log(sources);
+            if (sources.indexOf('') > 0) {
+                return;
+            }
+            sources.push("");
         },
         deleteSource: function(eventIndex, sourceIndex) {
             console.log(eventIndex, sourceIndex);
