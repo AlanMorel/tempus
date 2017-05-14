@@ -48,24 +48,30 @@
         <div class="event" v-for="event in data.events">
             <div>
                 <label>Date:</label>
-                <input type="date" value={{event.date}}></input>
+                <input type="date" v-model=event.date value={{event.date}}></input>
             </div>
             <div>
                 <label>Headline:</label>
-                <input type="text" value={{event.headline}}></input>
+                <input type="text" v-model=event.headline value={{event.headline}}></input>
             </div>
             <div>
                 <label>Event image URL:</label>
-                <input type="text" value={{event.image}}></input>
+                <input type="text" v-model=event.image value={{event.image}}></input>
             </div>
             <div>
                 <label>Description:</label>
-                <textarea rows="5" cols="65">{{event.description}}</textarea>
+                <textarea rows="5" cols="65" v-model=event.description>{{event.description}}</textarea>
             </div>
             <button v-on:click="delete(this.$index)">Delete Event</button>
         </div>
         <div class="new-event">
             <button v-on:click="add">Add New Event</button>
+        </div>
+        <div class="output">
+            <button v-on:click="save">Save Timeline</button>
+            <button v-on:click="load">Load Timeline</button>
+            <br>
+            <textarea rows="25" cols="125" v-model=output></textarea>
         </div>
     </script>
     <script type="x-template" id="date-template">
