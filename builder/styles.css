@@ -2,6 +2,7 @@
 
 #builder-app {
     padding: 0;
+    margin-bottom: 0
 }
 
 body {
@@ -26,16 +27,25 @@ label {
 
 textarea {
     font-family: "Open Sans", sans-serif;
+    margin-left: -4px;
+    width: 30rem;
 }
 
 input {
     width: 30rem;
     font-family: "Open Sans", sans-serif;
+    margin-left: -4px;
 }
 
 button {
     margin-left: 2rem;
     vertical-align: top;
+}
+
+.banner-image, .event-image {
+    margin-left: 12rem;
+    margin-top: 1rem;
+    width: 30rem;
 }
 
 .event {
@@ -57,8 +67,9 @@ div {
 }
 
 .actions {
-    padding-top: 1rem;
+    padding: 2rem 0 2rem 2rem;
     background-color: #d7ecff;
+    margin-bottom: 0;
 }
 
 .actions button {

@@ -13,6 +13,8 @@
         <div>
             <label>Banner image URL:</label>
             <input type="text" v-model=data.info.banner value={{data.info.banner}}></input>
+            <br>
+            <img class="banner-image" src={{data.info.banner}}></img>
         </div>
         <div>
             <label>Title:</label>
@@ -58,6 +60,8 @@
             <div>
                 <label>Event image URL:</label>
                 <input type="text" v-model=event.image value={{event.image}}></input>
+                <br>
+                <img class="event-image" src={{event.image}}></img>
             </div>
             <div>
                 <label>Description:</label>
