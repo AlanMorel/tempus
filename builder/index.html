@@ -10,7 +10,6 @@
     <script type="text/template" id="builder-template">
         <div>
             <h1>Tempus Timeline Builder</h1>
-            <h2>Header</h2>
             <div>
                 <label>Title:</label>
                 <input type="text" v-model=timeline.title :value=timeline.title></input>
@@ -21,7 +20,6 @@
                 <br>
                 <img class="banner-image" :src=timeline.banner></img>
             </div>
-            <h2>Timeline</h2>
             <div>
                 <label>Primary:</label>
                 <input type="color" v-model=timeline.primaryColor :value=timeline.primaryColor></input>
@@ -70,7 +68,7 @@
                     </span>
                     <button v-on:click="addSource(eventIndex)" class="add-source">Add New Source</button>
                 </div>
-                <button v-on:click="deleteEvent(eventIndex)">Delete Event</button>
+                <button v-on:click="deleteEvent(eventIndex)" class="delete-event">Delete Timeline Event</button>
             </div>
             <div class="actions">
                 <button v-on:click="addEvent">Add New Timeline Event</button>
