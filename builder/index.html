@@ -50,22 +50,22 @@
                 </div>
                 <div>
                     <label>Headline:</label>
-                    <input type="text" v-model=event.headline :value=event.headline></input>
+                    <input type="text" v-model=event.headline :value=event.headline placeholder="Enter headline"></input>
                 </div>
                 <div>
                     <label>Image:</label>
-                    <input type="text" v-model=event.image :value=event.image></input>
+                    <input type="text" v-model=event.image :value=event.image placeholder="Enter Image URL"></input>
                     <br>
                     <img class="event-image" :src=event.image></img>
                 </div>
                 <div>
                     <label>Description:</label>
-                    <textarea rows="5" v-model=event.description>{{event.description}}</textarea>
+                    <textarea rows="5" v-model=event.description placeholder="Enter description">{{event.description}}</textarea>
                 </div>
                 <div class="sources">
                     <label>Sources:</label>
                     <span v-for="(source, sourceIndex) of event.sources" class="source">
-                        <input type="text" v-model="event.sources[sourceIndex]" :value=source></input>
+                        <input type="text" v-model="event.sources[sourceIndex]" :value=source placeholder="Enter Source URL"></input>
                         <button v-on:click="deleteSource(eventIndex, sourceIndex)">X</button>
                     </span>
                     <button v-on:click="addSource(eventIndex)" class="add-source">Add New Source</button>

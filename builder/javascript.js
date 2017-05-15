@@ -16,18 +16,16 @@ Vue.component('builder', {
     methods: {
         addEvent: function() {
             this.timeline.events.push({
-                "date": "1990-01-01",
-                "headline": "Enter headline",
+                "date": "2000-01-01",
+                "headline": "",
                 "image": "/assets/images/",
-                "description": "Enter description"
+                "description": ""
             });
         },
         deleteEvent: function(index) {
             this.timeline.events.splice(index, 1);
         },
         saveTimeline: function() {
-
-            console.log("SAVING");
 
             if (this.timeline.events && this.timeline.events.length){
                 this.timeline.events.sort(function(a, b) {
@@ -38,8 +36,6 @@ Vue.component('builder', {
             this.output = JSON.stringify(this.timeline);
         },
         loadTimeline: function() {
-
-            console.log("LOADING");
 
             if (this.output.length < 1){
                 this.timeline = {};
