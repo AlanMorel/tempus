@@ -25,7 +25,7 @@
                         <p class="description">{{event.description}}</p>
                         <div v-if="event.sources.length">
                             <div class="source" v-for="source of event.sources">
-                                &bull; <a :href=source :style=linkStyles()>{{source}}</a>
+                                <a :href=source.link :style=linkStyles() class="link">{{source.name}}</a>
                             </div>
                         </div>
                     </div>
