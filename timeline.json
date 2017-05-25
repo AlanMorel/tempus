@@ -12,7 +12,10 @@
             "image": "/assets/images/declaration.png",
             "description": "Colonies declare independence from Great Britain",
             "sources": [
-                "https://history.state.gov/milestones/1776-1783/declaration"
+                {
+                    "name": "State Department",
+                    "link": "https://history.state.gov/milestones/1776-1783/declaration"
+                }
             ]
         },
         {

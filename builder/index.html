@@ -63,7 +63,8 @@
                 <div class="sources">
                     <label>Sources:</label>
                     <span v-for="(source, sourceIndex) of event.sources" class="source">
-                        <input type="text" v-model="event.sources[sourceIndex]" :value=source placeholder="Enter Source URL"></input>
+                        <input type="text" class="name" v-model="event.sources[sourceIndex].name" :value=source placeholder="Enter Name"></input>
+                        <input type="text" class="link" v-model="event.sources[sourceIndex].link" :value=source placeholder="Enter Link"></input>
                         <button v-on:click="deleteSource(eventIndex, sourceIndex)">X</button>
                     </span>
                     <button v-on:click="addSource(eventIndex)" class="add-source">Add New Source</button>

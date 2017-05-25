@@ -47,7 +47,10 @@ Vue.component('builder', {
         addSource: function(eventIndex) {
             var sources = this.timeline.events[eventIndex].sources;
             console.log(sources);
-            sources.push("");
+            sources.push({
+                title: "",
+                link: ""
+            });
         },
         deleteSource: function(eventIndex, sourceIndex) {
             console.log(eventIndex, sourceIndex);

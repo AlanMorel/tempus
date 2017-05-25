@@ -40,7 +40,6 @@ textarea {
 input {
     width: 30rem;
     font-family: "Open Sans", sans-serif;
-    margin-left: -4px;
 }
 
 button {
@@ -52,7 +51,7 @@ button {
     cursor: pointer;
 }
 
-button:hover 
+button:hover
 
 .banner-image, .event-image {
     margin-left: 7rem;
@@ -77,19 +76,27 @@ div {
     padding-left: 1rem;
 }
 
+.source:first-of-type {
+    margin-left: -4px;
+}
+
 .source {
-    float: right;
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
+    display: inline-block;
+    width: calc(100% - 8rem);
+    margin-left: 7rem;
+    margin-bottom: 1rem;
 }
 
 .source input {
-    width: 27rem;
+    width: 26.5rem;
+    margin-bottom: 0.25rem;
+    padding: 0.1rem 0.25rem;
 }
 
 .source button {
     padding: 0.25rem 1rem;
-    margin-left: 0;
+    position: absolute;
+    margin-top: -1.75rem;
 }
 
 .add-source {
@@ -99,6 +106,7 @@ div {
 span + .add-source {
     margin-left: 7rem;
     display: inline-block;
+    margin-top: 1rem;
 }
 
 .delete-event {
