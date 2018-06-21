@@ -1,34 +1,35 @@
 {
     "title": "History of The Administration of President Donald J. Trump",
-    "banner": "/assets/images/banner.png",
+    "banner": "\/assets\/images\/banner.png",
     "details": "This timeline displays a condensed list of the major events of the Trump administration.",
     "color": "#000000",
     "primaryColor": "#ff8585",
     "secondaryColor": "#ffdede",
     "lineColor": "#a90000",
-    "events": [{
+    "events": [
+        {
             "date": "2017-01-20",
             "headline": "Donald J. Trump inaugurated as America's 45th President",
-            "image": "https://static01.nyt.com/images/2017/01/21/us/21MEDIA-01p/21inauguration-trump-highlights-videoSixteenByNineJumbo1600-v2.jpg",
+            "image": "https:\/\/static01.nyt.com\/images\/2017\/01\/21\/us\/21MEDIA-01p\/21inauguration-trump-highlights-videoSixteenByNineJumbo1600-v2.jpg",
             "description": "",
             "sources": [
                 {
                     "name": "New York Times",
-                    "link": "https://www.nytimes.com/2017/01/20/us/politics/trump-inauguration-day.html"
+                    "link": "https:\/\/www.nytimes.com\/2017\/01\/20\/us\/politics\/trump-inauguration-day.html"
                 }
             ]
         },
         {
-                "date": "2017-01-23",
-                "headline": "President Trump withdraws U.S. from TPP",
-                "image": "https://pixel.nymag.com/imgs/daily/intelligencer/2018/04/12/12-trump-tpp.w710.h473.jpg",
-                "description": "",
-                "sources": [
-                    {
-                        "name": "White House",
-                        "link": "https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-withdrawal-united-states-trans-pacific-partnership-negotiations-agreement/"
-                    }
-                ]
-            }
+            "date": "2017-01-23",
+            "headline": "President Trump withdraws U.S. from TPP",
+            "image": "https:\/\/pixel.nymag.com\/imgs\/daily\/intelligencer\/2018\/04\/12\/12-trump-tpp.w710.h473.jpg",
+            "description": "",
+            "sources": [
+                {
+                    "name": "White House",
+                    "link": "https:\/\/www.whitehouse.gov\/presidential-actions\/presidential-memorandum-regarding-withdrawal-united-states-trans-pacific-partnership-negotiations-agreement\/"
+                }
+            ]
+        }
     ]
 }

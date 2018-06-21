@@ -34,6 +34,14 @@ Vue.component('builder', {
             }
 
             this.output = JSON.stringify(this.timeline, null, 4);
+
+            axios.post('/save', this.output)
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
         loadTimeline: function() {
 

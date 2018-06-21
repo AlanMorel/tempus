@@ -1,0 +1,11 @@
+Options +FollowSymLinks -MultiViews -Indexes
+
+DirectorySlash Off
+
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(.+)\.[\d]+\.((?:[^/.]+\.)?(?:css|js))$ $1.$2 [NC,L]
+
+RewriteRule ^builder/?$ /builder/index.html [L]
+RewriteRule ^save/?$ /save/index.php [L]
