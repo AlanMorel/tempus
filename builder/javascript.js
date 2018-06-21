@@ -2,8 +2,7 @@ Vue.component('builder', {
     props: ['source'],
     template: '#builder-template',
     data: () => ({
-        timeline: {},
-        output: ""
+        timeline: {}
     }),
     created() {
         axios.get(this.source).then(response => {
@@ -33,24 +32,15 @@ Vue.component('builder', {
                 });
             }
 
-            this.output = JSON.stringify(this.timeline, null, 4);
+            output = JSON.stringify(this.timeline, null, 4);
 
-            axios.post('/save', this.output)
+            axios.post('/save', output)
             .then(function (response) {
                 console.log(response);
             })
             .catch(function (error) {
                 console.log(error);
             });
-        },
-        loadTimeline: function() {
-
-            if (this.output.length < 1){
-                this.timeline = {};
-                return;
-            }
-
-            this.timeline = JSON.parse(this.output);
         },
         addSource: function(eventIndex) {
             var sources = this.timeline.events[eventIndex].sources;

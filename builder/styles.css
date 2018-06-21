@@ -4,7 +4,7 @@
     padding: 0;
     width: 42rem;
     margin: auto;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 body {
@@ -64,10 +64,11 @@ button:hover {
 }
 
 .event {
-    padding: 1rem 0;
+    padding: 2rem 0 1rem;
     margin-bottom: 2rem;
     border-radius: 0.25rem;
     background-color: #f1f1f1;
+    position: relative;
 }
 
 div {
@@ -87,58 +88,66 @@ div {
 .source {
     display: inline-block;
     width: 100%;
+    margin-top: 0.25rem;
     margin-bottom: 1rem;
 }
 
 .source input {
-    width: calc(100% - 3.5rem);
+    width: calc(100% - 2.5rem);
     margin-bottom: 0.25rem;
     padding: 0.1rem 0.25rem;
 }
 
 .source button {
-    padding: 0.25rem 1rem;
+    padding: 0.2rem 0.5rem;
     position: absolute;
-    margin-top: -1.75rem;
-    background-color: #ffbbbb;
+    margin-top: -1.7rem;
+    background-color: #f14747;
+    font-weight: bold;
+    color: white;
 }
 
 .source button:hover {
-    background-color: #ffacac;
+    background-color: #e24141;
 }
 
 span + .add-source {
     display: inline-block;
-    margin-top: 1rem;
-    background-color: #abd9ff;
+    background-color: #5ea8e4;
+    color: white;
     margin-left: 0;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
 }
 
 span + .add-source:hover {
-    background-color: #9cd2ff;
+    background-color: #549dd8;
 }
 
 .delete-event {
-    background-color: #ffbbbb;
+    background-color: #f14747;
     border: none;
-    margin-top: 1rem;
     border-radius: 0.25rem;
+    color: white;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
 }
 
 .delete-event:hover {
     background-color: #ffacac;
 }
 
-.actions {
-    padding: 1rem 2rem 2rem;
-    background-color: #d7ecff;
-    margin-bottom: 0;
-    border-radius: 0.5rem;
-}
-
 .actions button {
     margin-left: 0;
     margin-right: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #eee;
+}
+
+.actions button:hover {
+    background-color: #ddd;
 }
 
 .actions textarea {

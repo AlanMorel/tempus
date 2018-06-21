@@ -21,11 +21,11 @@
                 <img class="banner-image" :src=timeline.banner></img>
             </div>
             <div>
-                <label>Primary</label>
+                <label>Primary Color</label>
                 <input type="color" v-model=timeline.primaryColor :value=timeline.primaryColor></input>
             </div>
             <div>
-                <label>Secondary</label>
+                <label>Secondary Color</label>
                 <input type="color" v-model=timeline.secondaryColor :value=timeline.secondaryColor></input>
             </div>
             <div>
@@ -38,17 +38,18 @@
             </div>
             <div>
                 <label>Details</label>
-                <textarea rows="2" v-model=timeline.details></textarea>
+                <input type="text" v-model=timeline.details></input>
             </div>
             <h2>Events</h2>
             <div class="event" v-for="(event, eventIndex) in timeline.events">
-                <div>
-                    <label>Date</label>
-                    <input type="date" v-model=event.date :value=event.date></input>
-                </div>
+                <button v-on:click="deleteEvent(eventIndex)" class="delete-event">&times;</button>
                 <div>
                     <label>Headline</label>
                     <input type="text" v-model=event.headline :value=event.headline placeholder="Enter headline"></input>
+                </div>
+                <div>
+                    <label>Date</label>
+                    <input type="date" v-model=event.date :value=event.date></input>
                 </div>
                 <div>
                     <label>Image</label>
@@ -58,24 +59,21 @@
                 </div>
                 <div>
                     <label>Description</label>
-                    <textarea rows="5" v-model=event.description placeholder="Enter optional description">{{event.description}}</textarea>
+                    <textarea rows="3" v-model=event.description placeholder="Enter optional description">{{event.description}}</textarea>
                 </div>
                 <div class="sources">
                     <label>Sources</label>
                     <span v-for="(source, sourceIndex) of event.sources" class="source">
                         <input type="text" class="name" v-model="event.sources[sourceIndex].name" :value=source placeholder="Enter Source Name"></input>
                         <input type="text" class="link" v-model="event.sources[sourceIndex].link" :value=source placeholder="Enter Link"></input>
-                        <button v-on:click="deleteSource(eventIndex, sourceIndex)">X</button>
+                        <button v-on:click="deleteSource(eventIndex, sourceIndex)">&times;</button>
                     </span>
-                    <button v-on:click="addSource(eventIndex)" class="add-source">Add New Source</button>
+                    <button v-on:click="addSource(eventIndex)" class="add-source">&#43; New Source</button>
                 </div>
-                <button v-on:click="deleteEvent(eventIndex)" class="delete-event">Delete Timeline Event</button>
             </div>
             <div class="actions">
                 <button v-on:click="addEvent">Add New Timeline Event</button>
                 <button v-on:click="saveTimeline">Save Timeline</button>
-                <button v-on:click="loadTimeline">Load Timeline</button>
-                <textarea rows="30" v-model=output></textarea>
             </div>
         </div>
     </script>
