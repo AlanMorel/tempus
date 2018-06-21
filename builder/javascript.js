@@ -33,7 +33,7 @@ Vue.component('builder', {
                 });
             }
 
-            this.output = JSON.stringify(this.timeline);
+            this.output = JSON.stringify(this.timeline, null, 4);
         },
         loadTimeline: function() {
 

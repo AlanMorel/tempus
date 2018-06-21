@@ -1,67 +1,34 @@
 {
-    "title": "History of The United States of America",
+    "title": "History of The Administration of President Donald J. Trump",
     "banner": "/assets/images/banner.png",
-    "details": "This timeline displays a very condensed list of the major events in American history.",
+    "details": "This timeline displays a condensed list of the major events of the Trump administration.",
     "color": "#000000",
-    "primaryColor": "#85c0ff",
-    "secondaryColor": "#dee7ff",
-    "lineColor": "#0051a9",
+    "primaryColor": "#ff8585",
+    "secondaryColor": "#ffdede",
+    "lineColor": "#a90000",
     "events": [{
-            "date": "1776-07-04",
-            "headline": "Colonies declare independence from Great Britain",
-            "image": "/assets/images/declaration.png",
-            "description": "Colonies declare independence from Great Britain",
+            "date": "2017-01-20",
+            "headline": "Donald J. Trump inaugurated as America's 45th President",
+            "image": "https://static01.nyt.com/images/2017/01/21/us/21MEDIA-01p/21inauguration-trump-highlights-videoSixteenByNineJumbo1600-v2.jpg",
+            "description": "",
             "sources": [
                 {
-                    "name": "State Department",
-                    "link": "https://history.state.gov/milestones/1776-1783/declaration"
+                    "name": "New York Times",
+                    "link": "https://www.nytimes.com/2017/01/20/us/politics/trump-inauguration-day.html"
                 }
             ]
         },
         {
-            "date": "1861-04-12",
-            "headline": "The Civil War begins",
-            "image": "/assets/images/civilwar.png",
-            "description": "The North and South fight the Civil War over slavery and other issues. ",
-            "sources": [
-
-            ]
-        },
-        {
-            "date": "1929-10-29",
-            "headline": "The Wall Street stock market crashes",
-            "image": "/assets/images/crash.png",
-            "description": "The Wall Street stock market crashes. Fortunes are lost, and the Great Depression begins.",
-            "sources": [
-
-            ]
-        },
-        {
-            "date": "1941-12-07",
-            "headline": "Japan bombs the U.S. fleet at Pearl Harbor",
-            "image": "/assets/images/pearlharbor.png",
-            "description": "Japan bombs the U.S. fleet at Pearl Harbor, in Hawaii. The U.S. enters World War II. The war lasts until 1945.",
-            "sources": [
-
-            ]
-        },
-        {
-            "date": "1963-08-28",
-            "headline": "Martin Luther King Jr. delivers his 'I Have a Dream' speech",
-            "image": "/assets/images/mlk.png",
-            "description": "Martin Luther King Jr. delivers his 'I Have a Dream' speech in Washington D.C., leading the civil rights movement.",
-            "sources": [
-
-            ]
-        },
-        {
-            "date": "1969-07-20",
-            "headline": "One Giant Leap For Mankind",
-            "image": "/assets/images/moon.png",
-            "description": "Astronaut Neil Armstrong becomes the first person to walk on the moon.",
-            "sources": [
-
-            ]
-        }
+                "date": "2017-01-23",
+                "headline": "President Trump withdraws U.S. from TPP",
+                "image": "https://pixel.nymag.com/imgs/daily/intelligencer/2018/04/12/12-trump-tpp.w710.h473.jpg",
+                "description": "",
+                "sources": [
+                    {
+                        "name": "White House",
+                        "link": "https://www.whitehouse.gov/presidential-actions/presidential-memorandum-regarding-withdrawal-united-states-trans-pacific-partnership-negotiations-agreement/"
+                    }
+                ]
+            }
     ]
 }

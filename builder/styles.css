@@ -2,7 +2,7 @@
 
 #builder-app {
     padding: 0;
-    width: 40rem;
+    width: 42rem;
     margin: auto;
     margin-bottom: 5rem;
 }
@@ -25,47 +25,49 @@ img {
 }
 
 label {
-    width: 7rem;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
+    margin-bottom: 0.25rem;
+}
+
+textarea, input {
+    font-family: "Open Sans", sans-serif;
+    width: 100%;
+    border: solid 1px #e2e2e2;
+    padding: 0.25rem 0.5rem;
 }
 
 textarea {
-    font-family: "Open Sans", sans-serif;
-    margin-left: -4px;
-    width: 30rem;
     resize: vertical;
-}
-
-input {
-    width: 30rem;
-    font-family: "Open Sans", sans-serif;
 }
 
 button {
     margin-left: 1rem;
     vertical-align: top;
-    border: solid 1px lightgray;
+    border: none;
+    border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     background: white;
     cursor: pointer;
+    outline: none;
 }
 
-button:hover
+button:hover {
+    background-color: #eee;
+}
 
 .banner-image, .event-image {
-    margin-left: 7rem;
     margin-top: 1rem;
-    width: 30rem;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
 }
 
 .event {
     padding: 1rem 0;
     margin-bottom: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     background-color: #f1f1f1;
-    border: solid 1px #d4d4d4;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 div {
@@ -73,22 +75,23 @@ div {
 }
 
 .event div {
-    padding-left: 1rem;
+    padding: 0 1rem;
 }
 
-.source:first-of-type {
-    margin-left: -4px;
+.banner-image {
+    margin-top: 1rem;
+    width: 100%;
+    margin-left: 0;
 }
 
 .source {
     display: inline-block;
-    width: calc(100% - 8rem);
-    margin-left: 7rem;
+    width: 100%;
     margin-bottom: 1rem;
 }
 
 .source input {
-    width: 26.5rem;
+    width: calc(100% - 3.5rem);
     margin-bottom: 0.25rem;
     padding: 0.1rem 0.25rem;
 }
@@ -97,30 +100,40 @@ div {
     padding: 0.25rem 1rem;
     position: absolute;
     margin-top: -1.75rem;
+    background-color: #ffbbbb;
 }
 
-.add-source {
-    margin-left: -4px;
+.source button:hover {
+    background-color: #ffacac;
 }
 
 span + .add-source {
-    margin-left: 7rem;
     display: inline-block;
     margin-top: 1rem;
+    background-color: #abd9ff;
+    margin-left: 0;
+}
+
+span + .add-source:hover {
+    background-color: #9cd2ff;
 }
 
 .delete-event {
-    background-color: #ffe7e7;
-    border: solid 1px #ffa3a3;
+    background-color: #ffbbbb;
+    border: none;
     margin-top: 1rem;
+    border-radius: 0.25rem;
+}
+
+.delete-event:hover {
+    background-color: #ffacac;
 }
 
 .actions {
-    padding: 1rem 0 2rem 2rem;
+    padding: 1rem 2rem 2rem;
     background-color: #d7ecff;
     margin-bottom: 0;
     border-radius: 0.5rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .actions button {
@@ -130,6 +143,5 @@ span + .add-source {
 
 .actions textarea {
     margin-top: 1rem;
-    width: 36rem;
-    margin-left: 1px;
+    width: 100%;
 }
