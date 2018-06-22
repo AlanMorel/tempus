@@ -7,30 +7,31 @@
     <div id="timeline-app">
         <timeline source="timeline.json"></timeline>
     </div>
-    <footer>Copyright © 2018 <a href="https://alanmorel.com">Alan Morel</a></footer>
+    <footer>Copyright &copy; 2018 <a href="https://alanmorel.com">Alan Morel</a></footer>
     <script type="text/template" id="timeline-template">
         <div>
             <div class="header">
                 <img class="banner" :src=timeline.banner />
                 <h1 class="title">{{timeline.title}}</h1>
             </div>
-            <div class="timeline" :style=timelineStyles()>
-                <div class="details" :style=detailsStyles()>{{timeline.details}}</div>
+            <div class="timeline">
+                <div class="details">{{timeline.details}}</div>
                 <div class="events">
-                    <div class="line" :style=lineStyles()></div>
-                    <div class="event" :style=eventStyles() v-for="event of timeline.events">
+                    <div class="line"></div>
+                    <div class="event" v-for="event of timeline.events">
                         <date v-bind:value="event.date"></date>
                         <h2 class="headline">{{event.headline}}</h2>
                         <img class="image" :src=event.image />
                         <p class="description">{{event.description}}</p>
                         <div v-if="event.sources.length">
                             <div class="source" v-for="source of event.sources">
-                                <a :href=source.link :style=linkStyles() class="link">{{source.name}}</a>
+                                <a :href=source.link class="link">{{source.name}}</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <span v-html="getDynamicStyles()"></span>
         </div>
     </script>
     <script type="text/template" id="date-template">

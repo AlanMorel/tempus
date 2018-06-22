@@ -14,32 +14,39 @@ Vue.component('timeline', {
         })
     },
     methods: {
-        timelineStyles: function() {
-            return [
-                "background-color:" + this.timeline.secondaryColor + ";",
-                "color:" + this.timeline.color + ";"
-            ].join('');
-        },
-        detailsStyles: function() {
-            return [
-                "background-color:" + this.timeline.primaryColor + ";",
-                "color:" + this.timeline.color + ";"
-            ].join('');
-        },
-        lineStyles: function() {
-            return [
-                "background-color:" + this.timeline.lineColor + ";"
-            ].join('');
-        },
-        eventStyles: function() {
-            return [
-                "background-color:" + this.timeline.primaryColor + ";"
-            ].join('');
-        },
-        linkStyles: function() {
-            return [
-                "color:" + this.timeline.color + ";"
-            ].join('');
+        getDynamicStyles: function() {
+            return `
+                <style>
+                    .timeline {
+                        background-color: ${this.timeline.secondaryColor};
+                        color: ${this.timeline.color};
+                    }
+                    .details {
+                        background-color: ${this.timeline.primaryColor};
+                        color: ${this.timeline.color};
+                    }
+                    .line {
+                        background-color: ${this.timeline.lineColor};
+                    }
+                    .event {
+                        background-color: ${this.timeline.primaryColor};
+                    }
+                    .link {
+                        color: ${this.timeline.color};
+                    }
+                    .event:nth-child(odd)::before {
+                        border-right: 1rem solid ${this.timeline.primaryColor};
+                    }
+                    .event:nth-child(even)::before {
+                        border-left: 1rem solid ${this.timeline.primaryColor};
+                    }
+                    @media screen and (max-width: 50rem) {
+                        .event:nth-child(even)::before {
+                            border-right: 1rem solid ${this.timeline.primaryColor};
+                        }
+                    }
+                </style>
+            `;
         }
     },
 });

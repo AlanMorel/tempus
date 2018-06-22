@@ -1,6 +1,6 @@
-Vue.component('builder', {
+Vue.component('editor', {
     props: ['source'],
-    template: '#builder-template',
+    template: '#edit-template',
     data: () => ({
         timeline: {}
     }),
@@ -58,5 +58,5 @@ Vue.component('builder', {
 });
 
 new Vue({
-  el: '#builder-app',
+  el: '#edit-app',
 });

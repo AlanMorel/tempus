@@ -1,15 +1,15 @@
 <head>
-    <link rel="stylesheet" href="/builder/styles.css">
+    <link rel="stylesheet" href="/edit/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 
 <body>
-    <div id="builder-app">
-        <builder source="/timeline.json"></builder>
+    <div id="edit-app">
+        <editor source="/timeline.json"></editor>
     </div>
-    <script type="text/template" id="builder-template">
+    <script type="text/template" id="edit-template">
         <div>
-            <h1>Tempus Timeline Builder</h1>
+            <h1>Tempus Timeline Editor</h1>
             <div>
                 <label>Title</label>
                 <input type="text" v-model=timeline.title :value=timeline.title></input>
@@ -79,5 +79,5 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.js"></script>
-    <script src="/builder/javascript.js"/></script>
+    <script src="/edit/javascript.js"/></script>
 </body>
